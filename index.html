@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Dunamis Children Church</title>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/logo.png.jpg">
+</head>
+<style>
+	* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background-color: lightgray;
+}
+ul, ul.nav {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+}
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding: 35px 70px 0;
+}
+header h2 span {
+	color: #bf0a30;
+}
+header ul.nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+header ul.nav li {
+	margin: 0 15px;
+}
+header ul.nav li:first-child {
+	margin-left: 0;
+}
+header ul.nav li:last-child {
+	margin-right: 0;
+}
+@media(max-width:1000px) {
+	header {
+		padding: 20px 50px;
+	}
+}
+@media (max-width:700px) {
+	header {
+		flex-direction: column;
+	}
+	header h2 {
+		margin-bottom: 15px;
+	}
+	header ul.nav li {
+		margin: 0 7px;
+	}
+	.about-right p {
+		display: none;
+	}
+}
+/*banner area*/
+
+section {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 110px 100px;
+	color: #000;
+}
+@media (max-width:1000px) {
+	section {
+		padding: 100px 50px;
+	}
+}
+@media (max-width:600px) {
+	section {
+		padding: 125px 30px;
+	}
+}
+section p {
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+.textbanner{
+	top: 20px;
+}
+.banner-area {
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+}
+.banner-area .banner-img {
+	background-image: url(img/logo.png.jpg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	z-index: -1;
+	background-position: center center;
+}
+.banner-area .banner-img::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: .7;
+}
+.banner-area h1 {
+	margin-bottom: 15px;
+	font-size: 50px;
+	text-transform: uppercase;
+}
+.banner-area h1 span {
+	color: #bf0a30;
+}
+.banner-area h3 {
+	font-size: 25px;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+.banner-area a.banner-btn {
+	padding: 15px 35px;
+	background: #bf0a30;
+	text-transform: uppercase;
+}
+@media (max-width:800px) {
+	.banner-area {
+		min-height: 600px;
+	}
+	.banner-area h1 {
+		font-size: 27px;
+	}
+	.banner-area h3 {
+		font-size: 20px;
+	}
+	.banner-area a.banner-btn {
+		padding: 8px 20px;
+	}
+}
+/*about area*/
+
+ul.about-content {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.about-content li {
+	padding: 20px;
+	height: 500px;
+	background-clip: content-box;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+.about-left {
+	flex-basis: 30%;
+	background-image: url(img/events.jpg);
+}
+.about-right {
+	flex-basis: 70%;
+}
+.about-right h2 {
+	font-size: 35px;
+}
+.about-area p {
+	max-width: 800px;
+	margin-bottom: 35px;
+	line-height: 1.5;
+	text-align: left;
+	padding-left: 0;
+}
+.section-title {
+	text-transform: uppercase;
+	font-size: 50px;
+	margin-bottom: 5%;
+}
+.section-title span {
+	color: #bf0a30;
+}
+.about-right h2 {
+	margin-bottom: 3%;
+}
+.about-btn {
+	padding: 15px 35px;
+	background: #bf0a30;
+	border-radius: 50px;
+	text-transform: uppercase;
+	color: #fff;
+}
+@media (max-width: 1000px) {
+	.section-title {
+		font-size: 35px;
+	}
+	.about-left, .about-right {
+		flex-basis: 100%;
+	}
+	.about-content li {
+		padding: 8px;
+	}
+}
+/*msg area*/
+
+.msg-area {
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/2e2c4ff6-fa65-44aa-912d-3209fdfb058d.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	text-align: center;
+}
+/*service area*/
+
+ul.services-content {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.services-content li {
+	padding: 0 30px;
+	flex-basis: 33%;
+	text-align: center;
+}
+.services-content img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.services-content li h4 {
+	font-size: 20px;
+	margin-bottom: 25px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 3px;
+}
+.services-content li p {
+	margin: 0;
+}
+@media (max-width:1000px) {
+	.services-content li {
+		flex-basis: 100%;
+		margin-bottom: 65px;
+	}
+	.services-content li:last-child {
+		margin-bottom: 0;
+	}
+	.services-content li p {
+		padding: 0;
+	}
+}
+/*contact area*/
+
+ul.contact-content {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.contact-content li {
+	padding: 0 30px;
+	flex-basis: 33%;
+	text-align: center;
+}
+.contact-content li i {
+	font-size: 50px;
+	color: #bf0a30;
+	margin-bottom: 25px;
+}
+.contact-content li p {
+	margin: 0;
+}
+@media (max-width: 1000px) {
+	.contact-content li {
+		flex-basis: 100%;
+		margin-bottom: 65px;
+	}
+	.contact-content li:last-child {
+		margin-bottom: 0;
+	}
+	.contact-content li p {
+		padding: 0;
+	}
+}
+.lista{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;}
+
+/*footer*/
+
+footer {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	padding: 40px 0;
+}
+</style>
+<body>
+	<header>
+		<h2><a href="#"><img alt="" src="img\logo.png-removebg-preview.png"></a></h2>
+		<ul class="nav">
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li>
+				<a href="#about">About</a>
+			</li>
+			<li>
+				<a href="#services">Activities</a>
+			</li>
+			<li>
+				<a href="#contact">Contact</a>
+			</li>
+		</ul>
+	</header>
+	<section class="banner-area">
+		<div class="banner-img"></div>
+
+		<div data-aos="zoom-right" data-aos-duration="3000">
+			<div class="textbanner">
+				<h3>Dunamis Children Church Kubwa 1</h3><br>
+				<h1>A Trained Child<span> An Excellent Destiny</span></h1><br><a class="banner-btn" href="#about">More Info</a>
+			</section>
+			<section class="about-area" id="about">
+				<h3 class="section-title">About <span>Us</span></h3>
+			</div>
+		</div>
+	
+		<div data-aos="fade-right"
+			 data-aos-duration="1000">
+			 
+			 <ul class="about-content">
+				<p style="font-weight: bold; text-align:center; font-size: larger;">
+					Welcome to Dunamis Children Church Website – What’s It All About?
+This website is made just for YOU! It’s all about a special place called Dunamis Children Church—where kids like you learn about God, make new friends, play fun games, and grow into amazing, kind people. When you open the website, you’ll see cool pictures, fun colors, and words that show you what the church is all about. There's a part that says "About Us" which tells you how teachers will help you grow spiritually. You’ll find activities like Bible lessons, vacation school, and even games—yay! There’s also a quote of the day to inspire you, and a “Contact Us” section in case you or your parents want to visit or call the church. It's fun, safe, and filled with love just for you.
+				</p>
+				<li class="about-left"></li>
+				<li class="about-right">
+					<p><i class="fa fa-arrow-right"></i> Bible Lessons</p>
+					<p><i class="fa fa-arrow-right"></i> Choreography</p>
+					<p><i class="fa fa-arrow-right"></i> Choir</p>
+					<p><i class="fa fa-arrow-right"></i> Prayer Band</p>
+					<p><i class="fa fa-arrow-right"></i> Ushering</p>
+					<p><i class="fa fa-arrow-right"></i> Bible Explorers</p>
+				</li>
+			</ul>
+	</section>
+</div>
+
+		 <section class="msg-area">
+			<div class="msg-content">
+				<h2>Quote of the day</h2><br>
+				<div class="list"></div>
+				<list style="font-size:larger;"><marquee behavior="stop" direction="up" >
+<ul>
+	<li>"Love is living your life with the full consideration of the feelings,emotions and well beign of others..."<br> Pst Paul Enenche</li><br>
+	<li>"When the enemy shout <b>HEY</b> we shout<b>HEY HEY</b> when he shouts <b>HEY HEY</b> we shout <b>HEY HEY HEY..."<br> Pst Paul Enenche</b></li><br>
+	<li>" Where blood is wasted yours shall never be wasted... you cannot die like a chicken..."<br> Pst Paul Enenche</li><br>	
+	<li>"If it wiil crash you will not enter,if you enter it will not crash.." <br> Pst Paul Enenche</li><br>
+	
+	
+</ul></marquee>
+				</list>
+				</div>
+				
+
+				
+			
+			</div>
+		</section>
+
+
+	<div data-aos="fade-up"
+	data-aos-duration="1000">
+		<section class="services-area" id="services">
+			<h3 class="section-title">Our <span>Activities</span></h3>
+			<ul class="services-content">
+				<li>
+					<img alt="" src="img/bible quiz.jpg">
+					<h4>Bible Lessons</h4>
+					<p>Bible Lessons every Sunday to grow your child spiritually</p>
+				</li>
+				<li>
+					<img alt="" src="img/choir.jpg">
+					<h4>Events</h4>
+					<p>To help your child understand the word practically</p>
+				</li>
+				<li>
+					<img alt="" src="img/Chorography.jpg">
+					<h4>Games</h4>
+					<p>To help your child have fun and enjoy the games to boost their intelect</p>
+				</li>
+			</ul>
+		</section>
+
+	</div>
+	<div data-aos="flip-left"
+	data-aos-duration="2000">
+		<section class="contact-area" id="contact">
+			<h3 class="section-title">Contact <span>Us</span></h3>
+			<ul class="contact-content">
+				<li>
+					<i class="fa fa-map-marker"></i>
+					<p>Plot 902, Arab Road<br>
+					Kubwa, Abuja, Nigeria</p>
+				</li>
+				<li>
+					<i class="fa fa-phone"></i>
+					<p>09038134221<br>
+					08158172200</p>
+				</li>
+				<li>
+					<i class="fa fa-envelope"></i>
+					<p>dunamisgospel.com<br>
+					nwogadavid90@gmail.com</p>
+				</li>
+			</ul>
+		</section>
+	</div>
+	
+	<footer>
+		<p>All Right Reserved by <a href="#"><span style="color: gold; font-weight: bold;">Dunamis Children Church</span></a> in Collaboration with Nwoga David 2025</p>
+	</footer>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init();
+  </script>
+</html>
